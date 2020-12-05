@@ -6,10 +6,10 @@ import './index.styl'
 const Avatar = ({ src, name, size }) => {
   return pug`
     Div.avatar
-      AvatarUI( size=size src=src )
       Div.info
         Span.hello hello
         Span.name #{name}
+      AvatarUI( size=size src=src )
   `
 }
 

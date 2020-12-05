@@ -1,43 +1,24 @@
 import React, { useState } from 'react'
 import { Image } from 'react-native'
-import { Div, Drawer, Menu, Link, Span } from '@startupjs/ui'
-import MenuIcon from './MenuIcon'
+import { Div, Span } from '@startupjs/ui'
+import MobileMenu from './MobileMenu'
+import WideMenu from './WideMenu'
 import Avatar from './Avatar'
-import STYLES from './index.styl'
+import './index.styl'
 
-const { Item } = Menu
-
-const {
-  item
-} = STYLES
-
-const App = () => {
-  const [open, setOpen] = useState(false)
-
+const Header = () => {
   return pug`
     Div.header
       Div.top
         Image.img(source={ uri: '/header/main-logo-white.png' })
-        Drawer.menu(
-          visible=open
-          onDismiss=() => setOpen(false)
-          styleContent={ width: 250 }
-        )
-          Div.sidebar
-            Image.img(source={ uri: '/header/main-logo-white.png' })
-            Menu.menu
-              Link.item Valentines
-              Link.item Vopeeps
-              Link.item Voprep
-              Link.item Bare it
-              Link.item Culture
-              Link.item Tribe
-              Link.item Resources
-              Link.item Vowell
-            Avatar( size='l' src='/header/avatar3.jpeg' name='Niraj' )
-        MenuIcon(open=open onPress=() => setOpen(true))
+        Div.mobileMenu
+          MobileMenu
+        Div.wideMenu
+          WideMenu
+          Div.avatar
+            Avatar( size='xl' src='/header/avatar3.jpeg' name='Niraj' )
       Span.bareIt Bare it!
   `
 }
 
-export default App
+export default Header
