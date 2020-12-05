@@ -14,11 +14,13 @@ const Suggestion = ({
   date,
   text,
   vote,
-  comments
+  comments,
+  index
 }) => {
   return pug`
     Div.suggestion
       Div.left
+        Span.index #{index}
       Div.right
         Span.title #{title}
         Span.author #{author}  

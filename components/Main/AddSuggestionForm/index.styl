@@ -1,6 +1,8 @@
 .suggestionForm
   background-color #f7f7f7
   padding 2u
+  +tablet()
+    padding 4u
 
 .title
   font-size 4u
@@ -23,6 +25,11 @@
   margin-top 2u
   border-radius 0
 
+.footer
+  +tablet()
+    flex-direction row
+    align-items center
+
 .left
   margin-top 2u
 
@@ -35,3 +42,7 @@
 .button
   margin-top 2u
   border-radius 0
+  +tablet()
+    margin-left auto
+    padding-left 4u
+    padding-right 4u
