@@ -4,7 +4,7 @@ import Container from './Container'
 import AddSuggestionForm from './AddSuggestionForm'
 import Suggestions from './Suggestions'
 import Tabs, { TabsItem } from './Tabs'
-import './index.styl'
+import Sidebar from './Sidebar'
 
 const suggestions = [
   {
@@ -80,8 +80,7 @@ const Main = () => {
 
   return pug`
     Div.main
-      Span.bareIt Bare it!
-      Container
+      Container( sidebar=Sidebar() )
         AddSuggestionForm( onPost=handlePost )
         Tabs( value=tabValue onChange=(tabValue) => setTabValue(tabValue) )
           TabsItem( title='ALL' value=1 )

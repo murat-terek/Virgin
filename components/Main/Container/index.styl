@@ -1,2 +1,11 @@
 .container
-  padding 0 1u
+  +desktop()
+    flex-direction row
+
+.content
+  +desktop()
+    width 66.6666%
+
+.sidebar
+  +desktop()
+    width 33.3333%
