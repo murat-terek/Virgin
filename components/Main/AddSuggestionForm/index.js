@@ -1,11 +1,6 @@
 import React, { useState } from 'react'
 import { Div, H1, H3, TextInput, Span, Button } from '@startupjs/ui'
-import STYLES from './index.styl'
-
-const {
-  input,
-  textarea
-} = STYLES
+import './index.styl'
 
 const AddSuggestionForm = ({
   onPost
@@ -25,13 +20,13 @@ const AddSuggestionForm = ({
       H3.description We love to hear new ideas on how to be even more awesome
       TextInput(
         placeholder='Title of suggestion'
-        inputStyle=input
+        inputStyleName='input'
         value=title
         onChangeText=setTitle
       )
       TextInput.textarea(
         placeholder='Make a suggestion'
-        inputStyle=textarea
+        inputStyleName='textarea'
         numberOfLines=4
         value=suggestion
         onChangeText=setSuggestion

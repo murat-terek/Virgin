@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
-import { Div, Avatar, TextInput, Icon } from '@startupjs/ui'
+import { Div, Row, Avatar, TextInput, Icon } from '@startupjs/ui'
 import Comment from './Comment'
 import {
   faPaperPlane
 } from '@fortawesome/free-solid-svg-icons'
-import STYLES from './index.styl'
-
-const { input, send } = STYLES
+import './index.styl'
 
 const author = 'Corey Hartmann'
 
@@ -47,13 +45,13 @@ const Comments = ({
     Div.comments
       each comment in comments
         Comment( ...comment onClickRemove=() => handleRemoveComment(comment.id) )
-      Div.newComment
+      Row( vAlign='center' )
         Div.left
           Avatar( size='m' src='/header/avatar3.jpeg' )
         Div.right
           TextInput(
             placeholder='Reply to this suggestion...'
-            inputStyle=input
+            inputStyleName='input'
             value=commentValue
             onChangeText=setCommentValue
             icon=faPaperPlane

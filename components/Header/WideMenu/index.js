@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
-import { Menu, Link } from '@startupjs/ui'
-import STYLES from './index.styl'
-
-const { item } = STYLES
+import { Row, Menu, Link } from '@startupjs/ui'
+import './index.styl'
 
 const WideMenu = () => {
   return pug`
-    Menu.menu
+    Row
       Link.item Valentines
       Link.item Vopeeps
       Link.item Voprep

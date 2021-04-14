@@ -1,5 +1,5 @@
 import React from 'react'
-import { Div, Span } from '@startupjs/ui'
+import { Div, Row, Span } from '@startupjs/ui'
 import './index.styl'
 
 const Tabs = ({
@@ -11,13 +11,13 @@ const Tabs = ({
 
   return pug`
     Div.tabs
-      Div.header
+      Row.header
         each child in children
           Span.tabWrapper( onPress=() => onChange(child.props.value) )
-            Span.tab #{child.props.title}
+            Span.tab= child.props.title
             if childItem === child
               Div.activeTab
-      Div.content #{childItem}
+      Div.content= childItem
   `
 }
 

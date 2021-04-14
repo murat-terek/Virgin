@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Image } from 'react-native'
-import { Div, Span } from '@startupjs/ui'
+import { Div, Row, Span } from '@startupjs/ui'
 import MobileMenu from './MobileMenu'
 import WideMenu from './WideMenu'
 import Avatar from './Avatar'
@@ -9,7 +9,7 @@ import './index.styl'
 const Header = () => {
   return pug`
     Div.header
-      Div.top
+      Row.top
         Image.img(source={ uri: '/header/main-logo-white.png' })
         Div.mobileMenu
           MobileMenu

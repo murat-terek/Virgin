@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image } from 'react-native'
-import { Div, Span } from '@startupjs/ui'
+import { Row, Div, Span } from '@startupjs/ui'
 import './index.styl'
 
 const Event = ({
@@ -10,13 +10,13 @@ const Event = ({
   date
 }) => {
   return pug`
-    Div.event
+    Row
       Div.left
         Image.img( source=img )
       Div.middle
-        Span.title #{title}
-        Span.info #{info}
-        Span.date #{date}
+        Span.title= title
+        Span.info= info
+        Span.date= date
       Div.right
   `
 }

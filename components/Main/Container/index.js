@@ -5,8 +5,8 @@ import './index.styl'
 const Container = ({ children, sidebar }) => (
   pug`
     Div.container
-      Div.content #{children}
-      Div.sidebar #{sidebar}
+      Div.content= children
+      Div.sidebar= sidebar
   `
 )
 

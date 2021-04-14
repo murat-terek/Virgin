@@ -1,14 +1,14 @@
 import React from 'react'
 import { View } from 'react-native'
-import { Div, Span, Avatar as AvatarUI } from '@startupjs/ui'
+import { Row, Div, Span, Avatar as AvatarUI } from '@startupjs/ui'
 import './index.styl'
 
 const Avatar = ({ src, name, size }) => {
   return pug`
-    Div.avatar
+    Row( vAlign='center' )
       Div.info
         Span.hello hello
-        Span.name #{name}
+        Span.name= name
       AvatarUI( size=size src=src )
   `
 }

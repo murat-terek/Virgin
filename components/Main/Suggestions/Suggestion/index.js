@@ -1,5 +1,5 @@
 import React from 'react'
-import { Div, Span, Icon } from '@startupjs/ui'
+import { Div, Span, Row, Icon } from '@startupjs/ui'
 import {
   faCheck,
   faTimes,
@@ -20,20 +20,20 @@ const Suggestion = ({
   return pug`
     Div.suggestion
       Div.left
-        Span.index #{index}
+        Span.index= index
       Div.right
-        Span.title #{title}
-        Span.author #{author}  
-          Span.time #{date}
-        Span.text #{text}
-        Div.footer
-          Div.footerLeft
+        Span.title= title
+        Span.author= author  
+          Span.time= date
+        Span.text= text
+        Row.footer
+          Row( vAlign='center' )
             Icon.check( icon=faCheck )
             Span.vote vote: 
-              Span.voteNumber #{vote}
-          Div.footerRight
+              Span.voteNumber= vote
+          Row( vAlign='center' )
             Icon.remove( icon=faTimes )
-            Div.manage
+            Row.manage( vAlign='center' )
               Icon.heart( icon=faHeart )
               Span.manageText manage
         Comments( comments=comments )

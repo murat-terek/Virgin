@@ -1,13 +1,12 @@
 import React from 'react'
 import { Div, Span } from '@startupjs/ui'
 import { Image } from 'react-native'
-import MakeLoveText from './MakeLoveText'
 import './index.styl'
 
 const MakeLove = () => {
   return pug`
     Div.makeLove
-      MakeLoveText
+      Image.img(source={uri:'/make-love-text.png'})
       Span.text #MLSH
   `
 }

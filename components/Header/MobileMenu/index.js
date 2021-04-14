@@ -3,9 +3,7 @@ import { Image } from 'react-native'
 import { Div, Drawer, Menu, Link } from '@startupjs/ui'
 import MenuIcon from './MenuIcon'
 import Avatar from '../Avatar'
-import STYLES from './index.styl'
-
-const { item } = STYLES
+import './index.styl'
 
 const MobileMenu = () => {
   const [open, setOpen] = useState(false)
