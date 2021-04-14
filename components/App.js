@@ -1,13 +1,17 @@
 import React from 'react'
-import { ScrollView, View, Text } from 'react-native'
+import { ScrollView, ImageBackground } from 'react-native'
+import { Div } from '@startupjs/ui'
+import Header from './Header'
+import Main from './Main'
 import './App.styl'
-
 
 const App = () => {
   return pug`
     ScrollView.root
-      View.container
-        Text 111
+      ImageBackground.background( source='/background.png' )
+        Div.container
+          Header
+          Main
   `
 }
 

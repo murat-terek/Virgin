@@ -1,0 +1,32 @@
+.header
+  background-color #efefef
+  +tablet()
+    padding 0 2u
+  +desktop()
+    padding 0
+  +wide()
+    padding 0 2u
+
+.tabWrapper
+  padding 1u
+  +tablet()
+    padding 2u
+
+.tab
+  color #cc000c
+
+.activeTab
+  position absolute
+  bottom 0
+  left 50%
+  margin-left -5px
+  border-top 0
+  border-left 5px solid transparent
+  border-right 5px solid transparent
+  border-bottom 5px solid #ffffff
+  +tablet()
+    border-left-width 10px
+    border-right-width 10px
+    border-bottom-width 10px
+    margin-left -10px
+
